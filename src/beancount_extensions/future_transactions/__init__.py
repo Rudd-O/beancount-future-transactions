@@ -3,9 +3,10 @@
 
 __author__ = 'Manuel Amador (Rudd-O)'
 __plugins__ = ('future_transactions_plugin',)
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 
 import datetime
+from beancount.core import data
 
 # The name of the metadata field that indicates this is a future transaction
 # that should be filtered out if it is past today's date.
