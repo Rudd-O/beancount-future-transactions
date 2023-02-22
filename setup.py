@@ -22,7 +22,6 @@ classifiers = [
 'License :: OSI Approved :: GNU General Public License (GPL)',
 'Operating System :: POSIX :: Linux',
 'Programming Language :: Python :: 3 :: Only',
-'Topic :: Accounting',
 ]
 
 setup(
