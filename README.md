@@ -10,3 +10,11 @@ To use:
 That's it.
 
 From this point on, any transaction with a future tagged `#future` will not appear in your reports and queries.
+
+If you want to suppress **all** future-dated entries, add the option `suppress_all_future_entries` to your plugin stanza:
+
+```
+; beancount.bean
+
+plugin "beancount_extensions.future_transactions" "suppress_all_future_entries"
+```
