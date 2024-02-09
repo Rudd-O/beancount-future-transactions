@@ -3,7 +3,7 @@
 
 __author__ = "Manuel Amador (Rudd-O)"
 __plugins__ = ("future_transactions_plugin",)
-__version__ = "0.0.6"
+__version__ = "0.0.5"
 
 import datetime
 from beancount.core import data
@@ -28,9 +28,8 @@ def future_transactions_plugin(entries, options_map, *optional_args):
     }
     if optional_args:
         for argval in optional_args[0].split(","):
-            try:
-                arg, _, val = argval.partition("=")
-            except ValueError:
+            arg, dv, val = argval.partition("=")
+            if not dv:
                 arg = argval
                 val = "true"
             if val.lower() == "true":
