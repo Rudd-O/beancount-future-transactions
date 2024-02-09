@@ -18,3 +18,11 @@ If you want to suppress **all** future-dated entries, add the option `suppress_a
 
 plugin "beancount_extensions.future_transactions" "suppress_all_future_entries"
 ```
+
+if you want to suppress entries taggedwith a different tag, say, `#excludenow`, then you can use the following option:
+
+```
+; beancount.bean
+
+plugin "beancount_extensions.future_transactions" "tag_to_suppress=excludenow"
+```
